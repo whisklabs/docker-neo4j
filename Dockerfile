@@ -14,7 +14,7 @@ RUN curl \
 ADD launch.sh /
 
 RUN chmod +x /launch.sh && \
-    sed -i "s|#allow_store_upgrade|allow_store_upgrade|g" /usr/neo4j/conf/neo4j-server.properties && \
+    sed -i "s|#allow_store_upgrade|allow_store_upgrade|g" /usr/neo4j/conf/neo4j.properties && \
     sed -i "s|#org.neo4j.server.webserver.address|org.neo4j.server.webserver.address|g" /usr/neo4j/conf/neo4j-server.properties && \
     sed -i "s|dbms.security.auth_enabled=true|dbms.security.auth_enabled=false|g" /usr/neo4j/conf/neo4j-server.properties
 
