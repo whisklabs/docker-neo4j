@@ -1,12 +1,12 @@
 FROM whisk/jre:8u45
 
-ENV NEO4J_HOME=/usr/neo4j-community-2.2.1
+ENV NEO4J_HOME=/usr/neo4j-community-2.2.2
 
 RUN curl \
   --silent \
   --location \
   --retry 3 \
-  "http://neo4j.com/artifact.php?name=neo4j-community-2.2.1-unix.tar.gz" \
+  "http://neo4j.com/artifact.php?name=neo4j-community-2.2.2-unix.tar.gz" \
     | gunzip \
     | tar x -C /usr/ \
     && ln -s $NEO4J_HOME /usr/neo4j
